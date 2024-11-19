@@ -62,6 +62,7 @@
       }
       
       h2{
+        font-size: 50px;
         position: absolute;
         margin-top: 10px;
         margin-left: 5px;
@@ -131,18 +132,38 @@
         margin-bottom: 10px;
       }
       
-      .yt-embeded-holder{
-     
-        overflow: hidden;
-        
-        pointer-events: none
-      }
+      .yt-embeded-holder {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .yt-embeded-holder iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable pointer events on iframe */
+  }
+
+  .yt-overlay {
+    position: absolute;
+    top: ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Transparent overlay */
+    pointer-events: none; /* Enable pointer events on overlay */
+  }
       
-      .yt-embeded-holder iframe{
-        width: 100%;
-        height: 700px;
-       
-      }
+       .yt-title {
+    position: absolute;
+    
+    color: white;
+    font-size: 50px;
+    ; /* Optional background for readability */
+    padding: 10px;
+    border-radius: 5px;
+  }
     </style>
   <body>
 
@@ -166,15 +187,20 @@
     </div>
        <section id="central-portfolio-section">
        
-        <div id="central-project">
-          <h2>The Call
-          <br>
-          2024 Short film. A reference to the
-          <br>   
-           Kafkaesque reflection of modern digital life. </h2>
-          <iframe width="100%" height="500" src="https://www.youtube.com/embed/jV1oKc3opSI?si=l78RBuwmtAGLkyB_&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </div>
+      <div id="central-project">
+  <div class="yt-embeded-holder">
+    <h2 class="yt-title">The Call<br>2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
+    <iframe 
+      src="https://www.youtube.com/embed/jV1oKc3opSI?autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <div class="yt-overlay"></div> <!-- Overlay above the iframe -->
+  </div>
+</div>
+        
     </section>
      <h>Projects</h>
     <div class="container">
