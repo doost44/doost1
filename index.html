@@ -123,6 +123,13 @@
 
         margin-bottom: 10px;
       }
+      
+      .yt-embeded-holder{
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        pointer-events: none;
+      }
     </style>
   <body>
 
@@ -149,7 +156,9 @@
         <div id="central-project">
           <h3>The Call</h3>
           <p>2024 Short film. A reference to the Kafkaesque reflection of modern digital life.</p>
-          <iframe width="100%" height="500" src="https://www.youtube.com/embed/jV1oKc3opSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="yt-embeded-holder">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/jV1oKc3opSI&autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
 
     <div class="container">
