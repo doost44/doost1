@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie Cilla</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif;
+        background-color: #594947;
+        color: #ECF2DF;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: #080D07;
+        padding: 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      nav a {
+        color: #ECF2DF;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0;
+      }
+
+      main {
+        padding: px;
+      }
+
+      #portfolio-section {
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      #central-project {
+        flex: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .project {
+        width: 30%;
+        background-color: #594947;
+        color: #ECF2DF;
+        text-align: center;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .project img {
+        width: 100%;
+        height: auto;
+      }
+
+      .project h3,
+      .project a {
+        margin: 10px 0;
+      }
+
+      .project a {
+        color: #080D07;
+        background-color: #ECF2DF;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      footer {
+        background-color: #262405;
+        color: #ECF2DF;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .project {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Add navigation links here if needed -->
+      </nav>
+      <div id="branding">
+        <h1>Charlie Cilla</h1>
+      </div>
+    </header>
+    <main>
+      <section id="portfolio-section">
+        <h2>Projects</h2>
+        <div id="central-project">
+          <h3>The Call</h3>
+          <p>2024 Short film. A reference to the Kafkaesque reflection of modern digital life.</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jV1oKc3opSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="project">
+          <h3>DDE UOW Works 4</h3>
+          <img src="formatted/DDE_UOW_Works4.jpg" alt="DDE UOW Works 4">
+          <a href="projects_code/project1.html">View Project</a>
+        </div>
+        <div class="project">
+          <h3>AHFTW UOW Works 2</h3>
+          <img src="formatted/ahftw_UOW_works2.jpg" alt="AHFTW UOW Works 2">
+          <a href="projects_code/project2.html">View Project</a>
+        </div>
+        <div class="project">
+          <h3>Editorial Illustration - Scientific American</h3>
+          <img src="formatted/Editorial_Illustration_scientificamerican.jpg" alt="Editorial Illustration">
+          <a href="projects_code/project3.html">View Project</a>
+        </div>
+        <div class="project">
+          <h3>Huh UOW Works 1</h3>
+          <img src="formatted/huh_UOW_Works1.jpg" alt="Huh UOW Works 1">
+          <a href="projects_code/project4.html">View Project</a>
+        </div>
+        <div class="project">
+          <h3>Innisdale SS Print</h3>
+          <img src="formatted/InnisdaleSS_Print.jpg" alt="Innisdale SS Print">
+          <a href="projects_code/project5.html">View Project</a>
+        </div>
+        <div class="project">
+          <h3>National Geo Collage Work</h3>
+          <img src="formatted/NationalGeo_CollageWork.jpg" alt="National Geo Collage Work">
+          <a href="projects_code/project6.html">View Project</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Charlie Cilla. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
