@@ -72,6 +72,20 @@
         margin-left: 5px;
         color: white;
       }
+        .overlay-box {
+    position: absolute;
+    top: 0;
+    right: 0; /* Attach the box to the right side */
+    width: 150px; /* Adjust the width of the box */
+    height: 100%; /* Match the height of the video */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+  }
 
       nav {
 
@@ -161,13 +175,28 @@
       
        .yt-title {
     position: absolute;
+    top: -10px;
     
     color: white;
     font-size: 50px;
-    ; /* Optional background for readability */
-    padding: 10px;
-    border-radius: 5px;
+    background-color: black; /* Optional: Add semi-transparent background */
+    padding: 100px;
+    margin-right: 100px;
+   
   }
+      .yt-title2 {
+    position: absolute;
+   
+    left: 75%;
+    color: black;
+    font-size: 50px;
+    background-color: black; /* Optional: Add semi-transparent background */
+    padding: 100px;
+    margin-right: 100px;
+   
+  }
+      
+   
     </style>
   <body>
 
@@ -188,12 +217,15 @@
 
 
       </ul>
+      
     </div>
        <section id="central-portfolio-section">
        
       <div id="central-project">
   <div class="yt-embeded-holder">
     <h2 class="yt-title">The Call<br>2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
+        <h2 class="yt-title2">The Call<br>2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
+
     <iframe 
       src="https://www.youtube.com/embed/jV1oKc3opSI?autoplay=1&mute=1&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI&cc_load_policy=0" 
       title="YouTube video player" 
@@ -203,6 +235,7 @@
     </iframe>
     <div class="yt-overlay"></div> <!-- Overlay above the iframe -->
   </div>
+       
 </div>
         
     </section>
