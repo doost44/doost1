@@ -7,8 +7,8 @@
  
 
 </head>
-    <style>
-        body.fade-out {
+   <style>
+      body.fade-out {
         opacity: 0;
         transition: opacity 0.5s ease;
       }
@@ -18,7 +18,7 @@
         transition: opacity 0.5s ease;
       }
 
-         * {
+      * {
         margin: 0;
         ;
         padding: 0;
@@ -31,7 +31,53 @@
         color: white;
 
       }
- h1 {
+
+      @media screen and (max-width: 600px) {
+        body {
+          font-size: 0.875em;
+        }
+
+        h1 {
+          font-size: 0.875em;
+
+        }
+
+
+        header h1 {
+          font-size: 0.875em;
+        }
+
+        header ul {
+          flex-direction: column;
+          font-size: 0.875em;
+        }
+
+        header li {
+          margin: 0.875em 0;
+        }
+
+        
+
+        br {
+          display: none;
+        }
+
+       
+
+
+        .container {
+          flex-direction: column;
+        }
+
+        .left-column,
+        .middle-column,
+        .right-column {
+          width: 100%;
+        }
+
+      }
+
+      h1 {
         text-align: center;
         font-size: 50px;
       }
@@ -43,7 +89,7 @@
 
 
       header {
-
+        
         width: 100%;
         background-color: black;
         margin-top: -3%;
@@ -92,13 +138,27 @@
         margin-left: 5px;
         color: white;
       }
-        
+
+     
+
+      nav {
+
+        color: #ffffff;
+        background-color: white;
+        height: 30px;
+        font-size: 50;
+        padding: 7px 0px 0px 0px;
+
+      
+
+     
+
+      }
 
       .container {
         display: flex;
         max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 40px;
+        margin: 50 auto;
         padding: 20px;
 
 
@@ -160,6 +220,16 @@
         padding: 20px;
 
       }
+
+     
+
+      
+
+    
+
+      
+
+      
     </style>
 <body>
   <header>
@@ -193,6 +263,18 @@
       </div>
 
       <div class="right-column">
+        <h1>
+
+     
+            <img src="../huh_UOW_Works1.jpg" alt="Huh UOW Works 1">
+         
+        </h1>
+        <h1>
+
+     
+            <img src="../huh_UOW_Works1.jpg" alt="Huh UOW Works 1">
+         
+        </h1>
         <h1>
 
      
