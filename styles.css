@@ -171,6 +171,7 @@ header {
       max-height: 400;
       display: block;
       padding: 20px;
+     border-radius: 5px;
 
     }
 
@@ -187,6 +188,7 @@ header {
       max-height: 400;
       display: block;
       padding: 20px;
+     border-radius: 5px;
     }
 
     .right-column h1 {
@@ -201,6 +203,7 @@ header {
       max-height: 454000;
       display: block;
       padding: 20px;
+     border-radius: 5px;
 
     }
      .left-column img:hover,
