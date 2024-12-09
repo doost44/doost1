@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Charlie Cilla</title>
-
-
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charlie Cilla</title>
   <style>
-  
     body {
       font-family: 'Century Gothic', sans-serif;
       background-color: black;
       color: white;
     }
 
-    h1,
-    h2 {
+    h1 {
+      font-size: 50px;
+    }
+
+    h1, h2 {
       text-align: center;
       margin-bottom: 20px;
       color: white;
@@ -45,25 +43,49 @@
 
     .container {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       max-width: 1200px;
-      margin: 100px auto;
+      margin: 50px auto;
       padding: 20px;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .left-column,
     .right-column {
       flex: 1;
       padding: 20px;
+      min-width: 300px;
     }
 
-    .left-column ul {
+    .left-column img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 120px;
+    }
+
+    .right-column ul {
       list-style: none;
       padding: 0;
     }
 
-    .left-column ul li {
+    .right-column ul li {
       margin-bottom: 10px;
+    }
+
+    .right-column a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .right-column a:hover {
+      color: red;
     }
 
     .right-column form {
@@ -98,30 +120,48 @@
     .right-column form button:hover {
       background-color: darkred;
     }
-  </style>
-  <body>
-    <header>
-      <h1>CONTACT CHARLIE CILLA</h1>
-      <ul>
-        <li><a href="../index.html">HOME</a></li>
-        <li><a href="page_portfolio.html">PORTFOLIO</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="/">ABOUT</a></li>
-      </ul>
-    </header>
 
-    <div class="container">
+    .social-icons img {
+      width: 30px; /* Adjust icon size */
+      height: 30px;
+      margin-right: 10px; /* Space between icons */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CHARLIE CILLA</h1>
+    <ul>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="page_portfolio.html">PORTFOLIO</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="/">ABOUT</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <div class="columns">
+      <!-- Left Column: Image -->
       <div class="left-column">
+        <img src="A5_Charlie_Cilla_Paradox.jpg" alt="National Geo Collage Work Screenshot">
+      </div>
+
+      <!-- Right Column: Contact Information and Form -->
+      <div class="right-column">
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:charlievcilla@gmail.com">charlievcilla@gmail.com</a></p>
-
         <p>Follow me on social media:</p>
-        <ul>
-          <li><a href="https://www.instagram.com/charlie_cilla/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="right-column">
+        <div class="social-icons">
+          <!-- Instagram Icon Slot -->
+          <a href="https://www.instagram.com/charlie_cilla/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+          </a>
+          <!-- LinkedIn Icon Slot -->
+          <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+            <img src="linkedin.webp" alt="LinkedIn">
+          </a>
+        </div>
+
         <h2>Send a Message</h2>
         <form action="submit_form.php" method="post">
           <label for="name">Name:</label>
@@ -137,9 +177,10 @@
         </form>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <p>&copy; 2024 Charlie Cilla. All rights reserved.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2024 Charlie Cilla. All rights reserved.</p>
+  </footer>
+</body>
 </html>
