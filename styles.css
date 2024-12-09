@@ -138,11 +138,7 @@ header {
 
     }
     
-.right-column img,
-.middle-column img,
-.left-column img {
-  border-radius: 10px;
-}
+
     .left-column {
       width: 48%;
     }
