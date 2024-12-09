@@ -1,13 +1,5 @@
  <style>
-    body.fade-out {
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    body.fade-in {
-      opacity: 1;
-      transition: opacity 0.5s ease;
-    }
+   
 
     * {
       margin: 0;
@@ -146,7 +138,11 @@ header {
 
     }
     
-
+.right-column img,
+.middle-column img,
+.left-column img {
+  border-radius: 10px;
+}
     .left-column {
       width: 48%;
     }
@@ -171,7 +167,7 @@ header {
       max-height: 400;
       display: block;
       padding: 20px;
-      border-radius: 10px;
+     
 
     }
 
@@ -188,7 +184,7 @@ header {
       max-height: 400;
       display: block;
       padding: 20px;
-      border-radius: 10px;
+      
     }
 
     .right-column h1 {
@@ -203,13 +199,13 @@ header {
       max-height: 454000;
       display: block;
       padding: 20px;
-      border-radius: 10px;
+     
 
     }
      .left-column img:hover,
       .middle-column img:hover,
       .right-column img:hover {
-      transform: scale(1.2); /* Grows the image */
-      transition: transform 0.1s ease; /* Smooth animation */
+      transform: scale(1.2); 
+      transition: transform 0.1s ease; 
       }
   </style>
