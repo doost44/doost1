@@ -21,7 +21,6 @@
         position: absolute;
         top: 0;
         right: 0;
-
         width: 150px;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
@@ -34,30 +33,26 @@
       }
 
       nav {
-
         color: #ffffff;
         background-color: white;
         height: 30px;
         font-size: 50;
         padding: 7px 0px 0px 0px;
+      }
 
-        #central-portfolio-section {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 15px;
+      #central-portfolio-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+      }
 
-          padding: 20px;
-        }
-
-        #central-project {
-          flex: 100%;
-          max-width: 1000px;
-          margin: 0;
-          text-align: center;
-          margin-top: 20px;
-
-        }
-
+      #central-project, #central-project-2 {
+        flex: 100%;
+        max-width: 1000px;
+        margin: 0;
+        text-align: center;
+        margin-top: 20px;
       }
 
       .container {
@@ -65,69 +60,9 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
-
-
-      }
-
-      .left-column {
-        width: 48%;
-      }
-
-      .middle-column {
-        width: 48%;
-      }
-
-      .right-column {
-        width: 48%;
-      }
-
-      .left-column h1 {
-        font-weight: bold;
-
-
-      }
-
-      .left-column img {
-        width: 100%;
-        max-width: 500px;
-        max-height: 450;
-        display: block;
-        padding: 20px;
-
-      }
-
-      .middle-column h1 {
-        font-weight: bold;
-
-
-
-      }
-
-      .middle-column img {
-        width: 100%;
-        max-width: 500px;
-        max-height: 450;
-        display: block;
-        padding: 20px;
-      }
-
-      .right-column h1 {
-        font-weight: bold;
-
-
-      }
-
-      .right-column img {
-        width: 100%;
-        max-width: 500px;
-        max-height: 450;
-        display: block;
-        padding: 20px;
-
       }
 
       .yt-embeded-holder {
-
         position: relative;
         width: 100%;
         height: 750px;
@@ -143,7 +78,7 @@
 
       .yt-overlay {
         position: absolute;
-        top: ;
+        top: 0;
         left: 0;
         width: 100%;
         height: 100%;
@@ -154,18 +89,15 @@
       .yt-title {
         position: absolute;
         top: 275px;
-
         color: white;
         font-size: 50px;
         background-color: black;
         padding: 10px;
         margin-right: 70px;
-
       }
 
       .yt-title2 {
         position: absolute;
-
         left: 80%;
         color: black;
         font-size: 70px;
@@ -177,7 +109,6 @@
       .yt-title3 {
         position: absolute;
         top: 100px;
-
         color: white;
         font-size: 70px;
         background-color: black;
@@ -187,24 +118,15 @@
     </style>
   <body>
 
-
-
     <header>
       <h1>CHARLIE CILLA</h1>
-
-
-
-
       <ul>
         <li> <a href="index.html">HOME</a> </li>
         <li> <a href="pages_code/page_portfolio.html">PORTFOLIO</a> </li>
         <li><a href="pages_code/page_contact.html">CONTACT</a></li>
         <li> <a href="pages_code/page_about.html">ABOUT</a> </li>
-
-
       </ul>
     </header>
-
 
     <section id="central-portfolio-section">
 
@@ -213,18 +135,22 @@
           <h2 class="yt-title3">The Call </h2>
           <h2 class="yt-title">2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
           <h2 class="yt-title2">The Call<br> 2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
-
-          <iframe src="https://www.youtube-nocookie.com/embed/85gvlt7RyTA?autoplay=2&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/85gvlt7RyTA?autoplay=2&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="yt-overlay"></div> 
         </div>
+      </div>
 
+      <div id="central-project-2">
+        <div class="yt-embeded-holder">
+          <h2 class="yt-title3">Second Project</h2>
+          <h2 class="yt-title">2025 Short Doc.<br> Exploring connection<br> through the lens<br> of skateboarding.</h2>
+          <h2 class="yt-title2">BoundByBoards<br> 2025 Short film.<br> Exploring connection<br> through the lens<br> of skateboarding. <br> Credit - DP</h2>
+          <iframe src="https://www.youtube.com/embed/84KcwAFeiZg?autoplay=2&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=jV1oKc3opSI&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="yt-overlay"></div> 
+        </div>
       </div>
 
     </section>
 
-
   </body>
-  </head>
-
 </html>
