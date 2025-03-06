@@ -73,12 +73,17 @@
             padding: 20px;
         }
 
+        .video-wrapper {
+            display: flex;
+            justify-content: center; /* Center the video-container horizontally */
+            margin: 50px auto;
+            max-width: 1200px; /* Adjust as needed */
+        }
+
         .video-container {
             display: flex; /* Use flexbox to align text and video horizontally */
             align-items: flex-start; /* Align items to the top */
             gap: 20px; /* Space between text and video */
-            margin: 50px auto;
-            max-width: 1200px; /* Adjust as needed */
         }
 
         .video-text {
@@ -129,28 +134,32 @@
     <section id="central-portfolio-section">
         <!-- First Video -->
         <div id="central-project">
-            <div class="video-container">
-                <div class="video-text">
-                    <h2>The Call</h2>
-                    <h2>2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
-                </div>
-                <div class="yt-embeded-holder">
-                    <iframe src="https://www.youtube.com/embed/85gvlt7RyTA?autoplay=0&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=85gvlt7RyTA&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="yt-overlay"></div>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <div class="video-text">
+                        <h2>The Call</h2>
+                        <h2>2024 Short film.<br> A Kafkaesque <br>reflection <br> of modern <br> digital life.</h2>
+                    </div>
+                    <div class="yt-embeded-holder">
+                        <iframe src="https://www.youtube.com/embed/85gvlt7RyTA?autoplay=0&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=85gvlt7RyTA&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="yt-overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Second Video -->
         <div id="central-project">
-            <div class="video-container">
-                <div class="video-text">
-                    <h2>Bound by Boards</h2>
-                    <h2>2025 Short Doc<br> Connections made <br> through griptape.<br> Credt: DP</h2>
-                </div>
-                <div class="yt-embeded-holder">
-                    <iframe src="https://www.youtube.com/embed/84KcwAFeiZg?autoplay=0&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=84KcwAFeiZg&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="yt-overlay"></div>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <div class="video-text">
+                        <h2>Bound by Boards</h2>
+                        <h2>2025 Short Doc<br> Connections made <br> through griptape.<br> Credt: DP</h2>
+                    </div>
+                    <div class="yt-embeded-holder">
+                        <iframe src="https://www.youtube.com/embed/84KcwAFeiZg?autoplay=0&loop=1&controls=0&color=white&modestbranding=0&rel=0&playsinline=1&enablejsapi=1&playlist=84KcwAFeiZg&cc_load_policy=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="yt-overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>
