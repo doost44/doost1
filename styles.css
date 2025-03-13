@@ -1,4 +1,18 @@
  <style>
+
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+body.fade-in {
+    opacity: 0;
+}
+
         * {
       margin: 0;
       
@@ -68,10 +82,24 @@
         }, 500); // 500ms matches the duration of the fade-out animation
     }
 
+    // Function to handle fade-in effect on page load
+    function fadeIn() {
+        document.body.classList.add('fade-in');
+        setTimeout(() => {
+            document.body.classList.remove('fade-in');
+        }, 50);
+    }
+
     // Attach the fadePage function to all anchor tags
-    const links = document.querySelectorAll('a');
-    links.forEach(link => {
-        link.addEventListener('click', fadePage);
+    document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', fadePage);
+        });
+
+        // Trigger fade-in effect on page load
+        fadeIn();
     });
 </script>
+
 </style>
