@@ -52,7 +52,7 @@ body.fade-in {
       z-index: 10;
       text-align: center;
       background-color: black;
-       margin-top: 10px;
+       margin-top: -10px;
          margin-bottom: -20px;
         
     }
