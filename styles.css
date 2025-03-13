@@ -52,4 +52,26 @@
        a:hover {
       color: red;
     }
+<script>
+    // Function to handle the fade effect
+    function fadePage(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Add the fade-out class to the body
+        document.body.classList.add('fade-out');
+
+        // Wait for the fade-out animation to complete
+        setTimeout(() => {
+            // Navigate to the new page
+            window.location.href = event.target.href;
+        }, 500); // 500ms matches the duration of the fade-out animation
+    }
+
+    // Attach the fadePage function to all anchor tags
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', fadePage);
+    });
+</script>
 </style>
