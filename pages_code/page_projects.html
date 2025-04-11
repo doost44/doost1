@@ -1,134 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    <title>Large Design Projects - Charlie Cilla</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Charlie Cilla Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        header {
-            width: 100%;
-            background-color: black;
-            margin-top: -10px;
-            z-index: 11;
-            position: fixed;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
+    header {
+      width: 100%;
+      background-color: black;
+      margin-top: -10px;
+      z-index: 11;
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-        }
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
 
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-right: 20px;
-        }
+    .logo {
+      width: 50px;
+      height: auto;
+      margin-right: 20px;
+    }
 
-        h1 {
-            margin: 0;
-            color: white;
-        }
+    h1 {
+      margin: 0;
+      color: white;
+    }
 
-        header ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+    header ul {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
 
-        header ul li {
-            margin-left: 20px;
-        }
+    header ul li {
+      margin-left: 20px;
+    }
 
-        header ul li a {
-            color: white;
-            text-decoration: none;
-        }
+    header ul li a {
+      color: white;
+      text-decoration: none;
+    }
 
-        .project-container {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-        }
+    .container {
+      max-width: 1920px;
+      margin: 80px auto 0;
+      padding: 20px;
+      color: white;
+    }
 
-        .project {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
+    .project-buttons {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .project img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 8px;
-        }
+    .project-buttons button {
+      background: none;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
 
-        .project-description {
-            max-width: 500px;
-        }
+    .project-section {
+      display: none;
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .project-description h2 {
-            margin-top: 0;
-        }
-    </style>
+    .project-section.active {
+      display: flex;
+    }
+
+    .project-description {
+      flex: 1;
+    }
+
+    .project-description h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .project-description p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .project-description a {
+      display: inline-block;
+      margin-top: 10px;
+      color: white;
+      text-decoration: underline;
+    }
+
+    .project-image {
+      flex: 1;
+    }
+
+    .project-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border: 2px solid white;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="../logo.png" alt="Logo" class="logo">
-            <h1>CHARLIE CILLA</h1>
-        </div>
-        <ul>
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="page_portfolio.html">PORTFOLIO</a></li>
-            <li><a href="page_contact.html">CONTACT</a></li>
-            <li><a href="page_about.html">ABOUT</a></li>
-            <li><a href="page_projects.html">PROJECTS</a></li>
-        </ul>
-    </header>
-
-    <div class="project-container">
-        <div class="project">
-            <div class="project-description">
-                <h2>National Geographic Collage</h2>
-                <p>A surrealist collage created from National Geographic archives, reimagining human impact on nature through digital layering techniques and vivid composition.</p>
-                <a href="../projects_code/project1.html">View Project</a>
-            </div>
-            <img src="../NationalGeo_CollageWork.jpg" alt="National Geo Collage Work Screenshot">
-        </div>
-
-        <div class="project">
-            <div class="project-description">
-                <h2>Song Cover Design</h2>
-                <p>This project explores typography and emotion through a bold, abstract cover design for an original music release. It focuses on atmosphere, minimalism, and visual rhythm.</p>
-                <a href="../projects_code/project2.html">View Project</a>
-            </div>
-            <img src="../Song cover v1.jpg" alt="Song cover v1">
-        </div>
-
-        <div class="project">
-            <div class="project-description">
-                <h2>Paradox Poster</h2>
-                <p>A graphic design piece that tackles paradoxical themes through composition, spatial distortion, and layered visuals. Created as part of an advanced design assignment.</p>
-                <a href="../projects_code/project3.html">View Project</a>
-            </div>
-            <img src="../A5_Charlie_Cilla_Paradox.jpg" alt="A5_Charlie_Cilla_Paradox">
-        </div>
+  <header>
+    <div class="header-content">
+      <img src="../logo.png" alt="Logo" class="logo">
+      <h1>CHARLIE CILLA</h1>
     </div>
+    <ul>
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="page_portfolio.html">PORTFOLIO</a></li>
+      <li><a href="page_contact.html">CONTACT</a></li>
+      <li><a href="page_about.html">ABOUT</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <div class="project-buttons">
+      <button onclick="showProject('project1')">Interactive Exhibit Design</button>
+      <button onclick="showProject('project2')">Brand Identity System</button>
+      <button onclick="showProject('project3')">Editorial Layout Project</button>
+    </div>
+
+    <div id="project1" class="project-section">
+      <div class="project-description">
+        <h2>Interactive Exhibit Design</h2>
+        <p>A museum exhibit prototype designed for immersive storytelling using spatial and motion graphics elements.</p>
+        <a href="../projects_code/project1.html">View Project</a>
+      </div>
+      <div class="project-image">
+        <img src="../NationalGeo_CollageWork.jpg" alt="Interactive Exhibit Design">
+      </div>
+    </div>
+
+    <div id="project2" class="project-section">
+      <div class="project-description">
+        <h2>Brand Identity System</h2>
+        <p>A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.</p>
+        <a href="../projects_code/project2.html">View Project</a>
+      </div>
+      <div class="project-image">
+        <img src="../Song cover v1.jpg" alt="Brand Identity System">
+      </div>
+    </div>
+
+    <div id="project3" class="project-section">
+      <div class="project-description">
+        <h2>Editorial Layout Project</h2>
+        <p>Magazine spread designs focusing on modern grid systems and expressive typography.</p>
+        <a href="../projects_code/project3.html">View Project</a>
+      </div>
+      <div class="project-image">
+        <img src="../A5_Charlie_Cilla_Paradox.jpg" alt="Editorial Layout Project">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showProject(projectId) {
+      const sections = document.querySelectorAll('.project-section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(projectId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
