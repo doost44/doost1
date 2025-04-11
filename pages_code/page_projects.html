@@ -5,11 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <title>Large Design Projects - Charlie Cilla</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            background-color: black;
+            margin-top: -10px;
+            z-index: 11;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        header ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li {
+            margin-left: 20px;
+        }
+
+        header ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .project-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-description {
+            max-width: 500px;
+        }
+
+        .project-description h2 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="logo.png" alt="Logo" class="logo">
+            <img src="../logo.png" alt="Logo" class="logo">
             <h1>CHARLIE CILLA</h1>
         </div>
         <ul>
@@ -21,51 +102,33 @@
         </ul>
     </header>
 
-    <section>
-        <div class="project-list">
-            <button onclick="showProject('project1')">Interactive Exhibit Design</button>
-            <button onclick="showProject('project2')">Brand Identity System</button>
-            <button onclick="showProject('project3')">Editorial Layout Project</button>
-        </div>
-        <div class="project-display">
-            <div class="project-description" id="description">
-                <h2>Project Title</h2>
-                <p>Select a project from the list to see more details.</p>
+    <div class="project-container">
+        <div class="project">
+            <div class="project-description">
+                <h2>National Geographic Collage</h2>
+                <p>A surrealist collage created from National Geographic archives, reimagining human impact on nature through digital layering techniques and vivid composition.</p>
+                <a href="../projects_code/project1.html">View Project</a>
             </div>
-            <div class="project-images" id="images">
-                <!-- Project images will go here -->
-            </div>
+            <img src="../NationalGeo_CollageWork.jpg" alt="National Geo Collage Work Screenshot">
         </div>
-    </section>
 
-    <script>
-        const projects = {
-            project1: {
-                title: "Interactive Exhibit Design",
-                description: "A museum exhibit prototype designed for immersive storytelling using spatial and motion graphics elements.",
-                images: ["../images/project1_1.jpg", "../images/project1_2.jpg", "../images/project1_3.jpg"]
-            },
-            project2: {
-                title: "Brand Identity System",
-                description: "A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.",
-                images: ["../images/project2_1.jpg", "../images/project2_2.jpg"]
-            },
-            project3: {
-                title: "Editorial Layout Project",
-                description: "Magazine spread designs focusing on modern grid systems and expressive typography.",
-                images: ["../images/project3_1.jpg", "../images/project3_2.jpg", "../images/project3_3.jpg"]
-            }
-        };
+        <div class="project">
+            <div class="project-description">
+                <h2>Song Cover Design</h2>
+                <p>This project explores typography and emotion through a bold, abstract cover design for an original music release. It focuses on atmosphere, minimalism, and visual rhythm.</p>
+                <a href="../projects_code/project2.html">View Project</a>
+            </div>
+            <img src="../Song cover v1.jpg" alt="Song cover v1">
+        </div>
 
-        function showProject(key) {
-            const project = projects[key];
-            document.getElementById('description').innerHTML =
-                `<h2>${project.title}</h2><p>${project.description}</p>`;
-            const imagesContainer = document.getElementById('images');
-            imagesContainer.innerHTML = project.images
-                .map(src => `<img src="${src}" alt="${project.title}">`)
-                .join('');
-        }
-    </script>
+        <div class="project">
+            <div class="project-description">
+                <h2>Paradox Poster</h2>
+                <p>A graphic design piece that tackles paradoxical themes through composition, spatial distortion, and layered visuals. Created as part of an advanced design assignment.</p>
+                <a href="../projects_code/project3.html">View Project</a>
+            </div>
+            <img src="../A5_Charlie_Cilla_Paradox.jpg" alt="A5_Charlie_Cilla_Paradox">
+        </div>
+    </div>
 </body>
 </html>
