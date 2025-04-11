@@ -17,14 +17,13 @@
     header {
       width: 100%;
       background-color: black;
+      margin-top: -10px;
+      z-index: 11;
       position: fixed;
-      top: 0;
-      left: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      z-index: 1000;
     }
 
     .header-content {
@@ -40,8 +39,8 @@
 
     h1 {
       margin: 0;
-      font-size: 30px;
       color: white;
+      font-size: 30px;
     }
 
     header ul {
@@ -61,7 +60,7 @@
     }
 
     section {
-      padding: 160px 20px 40px; /* increased top padding for header overlap */
+      padding: 160px 20px 40px; /* ensure content clears the fixed header */
       max-width: 1920px;
       margin: 0 auto;
     }
@@ -125,10 +124,9 @@
     </div>
     <ul>
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="page_about.html">ABOUT</a></li>
-      <li><a href="page_contact.html">CONTACT</a></li>
       <li><a href="page_portfolio.html">PORTFOLIO</a></li>
-      <li><a href="page_projects.html">PROJECTS</a></li>
+      <li><a href="page_contact.html">CONTACT</a></li>
+      <li><a href="page_about.html">ABOUT</a></li>
     </ul>
   </header>
 
