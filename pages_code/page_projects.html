@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Design Projects - Charlie Cilla</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="page_about.html">About</a></li>
+            <li><a href="page_contact.html">Contact</a></li>
+            <li><a href="page_portfolio.html">Portfolio</a></li>
+        </ul>
+    </header>
+
+    <div class="projects-container">
+        <div class="project-list">
+            <button onclick="showProject('project1')">Interactive Exhibit Design</button>
+            <button onclick="showProject('project2')">Brand Identity System</button>
+            <button onclick="showProject('project3')">Editorial Layout Project</button>
+        </div>
+        <div class="project-display">
+            <div class="project-description" id="description">
+                <h2>Project Title</h2>
+                <p>Select a project from the list to see more details.</p>
+            </div>
+            <div class="project-images" id="images">
+                <!-- Images will load here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projects = {
+            project1: {
+                title: "Interactive Exhibit Design",
+                description: "A museum exhibit prototype designed for immersive storytelling using spatial and motion graphics elements.",
+                images: ["../images/project1_1.jpg", "../images/project1_2.jpg", "../images/project1_3.jpg"]
+            },
+            project2: {
+                title: "Brand Identity System",
+                description: "A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.",
+                images: ["../images/project2_1.jpg", "../images/project2_2.jpg"]
+            },
+            project3: {
+                title: "Editorial Layout Project",
+                description: "Magazine spread designs focusing on modern grid systems and expressive typography.",
+                images: ["../images/project3_1.jpg", "../images/project3_2.jpg", "../images/project3_3.jpg"]
+            }
+        };
+
+        function showProject(key) {
+            const project = projects[key];
+            document.getElementById('description').innerHTML = `<h2>${project.title}</h2><p>${project.description}</p>`;
+            const imagesContainer = document.getElementById('images');
+            imagesContainer.innerHTML = project.images.map(src => `<img src="${src}" alt="${project.title}">`).join('');
+        }
+    </script>
+</body>
+</html>
 
