@@ -4,24 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css">
-  <title>Charlie Cilla Portfolio</title>
+  <title>Projects – Charlie Cilla</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
     }
 
     header {
       width: 100%;
       background-color: black;
-      margin-top: -10px;
-      z-index: 11;
       position: fixed;
+      top: 0;
+      left: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
+      z-index: 1000;
     }
 
     .header-content {
@@ -37,6 +40,7 @@
 
     h1 {
       margin: 0;
+      font-size: 30px;
       color: white;
     }
 
@@ -56,19 +60,18 @@
       text-decoration: none;
     }
 
-    .container {
+    section {
+      padding: 100px 20px 40px;
       max-width: 1920px;
-      margin: 80px auto 0;
-      padding: 20px;
-      color: white;
+      margin: 0 auto;
     }
 
-    .project-buttons {
+    .project-list {
       text-align: center;
       margin-bottom: 40px;
     }
 
-    .project-buttons button {
+    .project-list button {
       background: none;
       color: white;
       border: 2px solid white;
@@ -78,30 +81,22 @@
       cursor: pointer;
     }
 
-    .project-section {
-      display: none;
-      flex-direction: row;
-      gap: 40px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .project-section.active {
+    .project-display {
       display: flex;
-    }
-
-    .project-description {
-      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .project-description h2 {
-      font-size: 30px;
+      font-size: 50px;
       margin-bottom: 10px;
     }
 
     .project-description p {
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto 20px;
     }
 
     .project-description a {
@@ -109,15 +104,19 @@
       margin-top: 10px;
       color: white;
       text-decoration: underline;
+      font-size: 18px;
     }
 
-    .project-image {
-      flex: 1;
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .project-image img {
-      width: 100%;
+    .project-images img {
       max-width: 500px;
+      width: 100%;
       height: auto;
       border: 2px solid white;
     }
@@ -126,63 +125,65 @@
 <body>
   <header>
     <div class="header-content">
-      <img src="../logo.png" alt="Logo" class="logo">
+      <img src="../logo.png" alt="Logo" class="logo"/>
       <h1>CHARLIE CILLA</h1>
     </div>
     <ul>
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="page_portfolio.html">PORTFOLIO</a></li>
-      <li><a href="page_contact.html">CONTACT</a></li>
       <li><a href="page_about.html">ABOUT</a></li>
+      <li><a href="page_contact.html">CONTACT</a></li>
+      <li><a href="page_portfolio.html">PORTFOLIO</a></li>
+      <li><a href="page_projects.html">PROJECTS</a></li>
     </ul>
   </header>
 
-  <div class="container">
-    <div class="project-buttons">
+  <section>
+    <div class="project-list">
       <button onclick="showProject('project1')">Interactive Exhibit Design</button>
       <button onclick="showProject('project2')">Brand Identity System</button>
       <button onclick="showProject('project3')">Editorial Layout Project</button>
     </div>
-
-    <div id="project1" class="project-section">
-      <div class="project-description">
-        <h2>Interactive Exhibit Design</h2>
-        <p>A museum exhibit prototype designed for immersive storytelling using spatial and motion graphics elements.</p>
-        <a href="../projects_code/project1.html">View Project</a>
+    <div class="project-display">
+      <div class="project-description" id="description">
+        <h2>Project Title</h2>
+        <p>Select a project from the list to see more details.</p>
       </div>
-      <div class="project-image">
-        <img src="../NationalGeo_CollageWork.jpg" alt="Interactive Exhibit Design">
+      <div class="project-images" id="images">
+        <!-- Project images will go here -->
       </div>
     </div>
-
-    <div id="project2" class="project-section">
-      <div class="project-description">
-        <h2>Brand Identity System</h2>
-        <p>A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.</p>
-        <a href="../projects_code/project2.html">View Project</a>
-      </div>
-      <div class="project-image">
-        <img src="../Song cover v1.jpg" alt="Brand Identity System">
-      </div>
-    </div>
-
-    <div id="project3" class="project-section">
-      <div class="project-description">
-        <h2>Editorial Layout Project</h2>
-        <p>Magazine spread designs focusing on modern grid systems and expressive typography.</p>
-        <a href="../projects_code/project3.html">View Project</a>
-      </div>
-      <div class="project-image">
-        <img src="../A5_Charlie_Cilla_Paradox.jpg" alt="Editorial Layout Project">
-      </div>
-    </div>
-  </div>
+  </section>
 
   <script>
-    function showProject(projectId) {
-      const sections = document.querySelectorAll('.project-section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(projectId).classList.add('active');
+    const projects = {
+      project1: {
+        title: "Interactive Exhibit Design",
+        description: "A museum exhibit prototype designed for immersive storytelling using spatial and motion graphics elements.",
+        link: "../projects_code/project1.html",
+        images: ["../images/project1_1.jpg", "../images/project1_2.jpg", "../images/project1_3.jpg"]
+      },
+      project2: {
+        title: "Brand Identity System",
+        description: "A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.",
+        link: "../projects_code/project2.html",
+        images: ["../images/project2_1.jpg", "../images/project2_2.jpg"]
+      },
+      project3: {
+        title: "Editorial Layout Project",
+        description: "Magazine spread designs focusing on modern grid systems and expressive typography.",
+        link: "../projects_code/project3.html",
+        images: ["../images/project3_1.jpg", "../images/project3_2.jpg", "../images/project3_3.jpg"]
+      }
+    };
+
+    function showProject(key) {
+      const project = projects[key];
+      document.getElementById('description').innerHTML =
+        `<h2>${project.title}</h2><p>${project.description}</p><a href="${project.link}" target="_blank">View Project</a>`;
+      const imagesContainer = document.getElementById('images');
+      imagesContainer.innerHTML = project.images
+        .map(src => `<img src="${src}" alt="${project.title}">`)
+        .join('');
     }
   </script>
 </body>
