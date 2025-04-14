@@ -6,7 +6,7 @@
   <title>Projects – Charlie Cilla</title>
   <link rel="stylesheet" href="../styles.css"/>
   <style>
-    body { margin: 0; padding: 0; font-family: Arial, sans-serif; } 
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: #111; color: white; } 
        
     header { 
       width: 100%; 
@@ -19,18 +19,12 @@
       align-items: center; 
       padding: 10px 20px; 
     }
-        
+
     .header-content { display: flex; align-items: center; } 
     .logo { width: 50px; height: auto; margin-right: 20px; } 
     h1 { margin: 0; color: white; } 
 
-    header ul { 
-      list-style-type: none; 
-      display: flex; 
-      margin: 0; 
-      padding: 0; 
-    } 
-
+    header ul { list-style-type: none; display: flex; margin: 0; padding: 0; } 
     header ul li { margin-left: 20px; } 
     header ul li a { color: white; text-decoration: none; } 
 
@@ -65,7 +59,7 @@
 
     .project-description {
       flex: 1;
-      max-width: 600px;
+      max-width: 500px;
     }
 
     .project-description h2 {
@@ -75,10 +69,11 @@
 
     .project-description p {
       font-size: 18px;
+      line-height: 1.5;
     }
 
     .project-images {
-      flex: 1;
+      flex: 2;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -86,7 +81,8 @@
 
     .project-images img, .project-images iframe {
       width: 100%;
-      max-width: 600px;
+      max-width: 100%;
+      height: 700px;
       border: 2px solid white;
     }
   </style>
@@ -117,7 +113,7 @@
         <p>Select a project from the list to see more details.</p>
       </div>
       <div class="project-images" id="images">
-        <!-- Project visuals go here -->
+        <!-- Visuals go here -->
       </div>
     </div>
   </section>
@@ -126,11 +122,10 @@
     const projects = {
       project1: {
         title: "Student Meal Plan App Prototype",
-        description: `University students face considerable difficulty when trying to manage their meal plans efficiently. <br> 
-        Meal plans provide convenience but they fail to supply students with essential budgeting tools throughout an academic semester. <br> 
-        Students frequently believe their meal plan money will last through the semester but unexpectedly find their funds depleted before the end. <br> 
-        Students who lack structured budgeting strategies often exhaust their funds early in the semester, which forces them into 
-        financial difficulties and reduces their food options, leading to dependence on expensive and nutritionally poor external food alternatives.`,
+        description: `University students face considerable difficulty when trying to manage their meal plans efficiently.<br>
+        Meal plans provide convenience but they fail to supply students with essential budgeting tools throughout an academic semester.<br>
+        Students frequently believe their meal plan money will last through the semester but unexpectedly find their funds depleted before the end.<br>
+        This leads to financial stress and dependence on expensive or low-nutrition food alternatives.`,
         pdf: "../GBDA 210_Group 12_FInal presentation slides_.pdf"
       },
       project2: {
@@ -158,8 +153,7 @@
           .join('');
       } else if (project.pdf) {
         imagesContainer.innerHTML = `
-          <iframe src="${project.pdf}" width="100%" height="600px"></iframe>
-          <p style="color: white;">Having trouble viewing the PDF? <a href="${project.pdf}" target="_blank" style="color: cyan;">Download it here</a>.</p>
+          <iframe src="${project.pdf}" type="application/pdf"></iframe>
         `;
       } else {
         imagesContainer.innerHTML = `<p>No visuals available.</p>`;
