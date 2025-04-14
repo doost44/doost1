@@ -8,13 +8,31 @@
   <style>
     body { margin: 0; padding: 0; font-family: Arial, sans-serif; } 
        
-        header { width: 100%; background-color: black; margin-top: -10px; z-index: 11; position: fixed; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; }
+    header { 
+      width: 100%; 
+      background-color: black; 
+      margin-top: -10px; 
+      z-index: 11; 
+      position: fixed; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 10px 20px; 
+    }
         
-        .header-content { display: flex; align-items: center; } 
-        .logo { width: 50px; height: auto; margin-right: 20px; } 
-        h1 { margin: 0; color: white; } 
-        header ul { list-style-type: none; display: flex; margin: 0; padding: 0; } 
-        header ul li { margin-left: 20px; } header ul li a { color: white; text-decoration: none; } 
+    .header-content { display: flex; align-items: center; } 
+    .logo { width: 50px; height: auto; margin-right: 20px; } 
+    h1 { margin: 0; color: white; } 
+
+    header ul { 
+      list-style-type: none; 
+      display: flex; 
+      margin: 0; 
+      padding: 0; 
+    } 
+
+    header ul li { margin-left: 20px; } 
+    header ul li a { color: white; text-decoration: none; } 
 
     section {
       padding: 160px 20px 40px; /* ensure content clears the fixed header */
@@ -108,17 +126,21 @@
     const projects = {
       project1: {
         title: "Student Meal Plan App Prototype",
-        description: "University students face considerable difficulty when trying to manage their meal plans efficiently. <br> Meal plans provide convenience but they fail to supply students with essential budgeting tools throughout an academic semester. <br> Students frequently believe their meal plan money will last through the semester but unexpectedly find their funds depleted before the end. <br> Students who lack structured budgeting strategies often exhaust their funds early in the semester, which forces them into <br> financial difficulties and reduces their food options, leading to dependence <br> on expensive and nutritionally poor external food alternatives.,
-        images: ["../GBDA 210_Group 12_FInal presentation slides_.pdf"]
+        description: `University students face considerable difficulty when trying to manage their meal plans efficiently. <br> 
+        Meal plans provide convenience but they fail to supply students with essential budgeting tools throughout an academic semester. <br> 
+        Students frequently believe their meal plan money will last through the semester but unexpectedly find their funds depleted before the end. <br> 
+        Students who lack structured budgeting strategies often exhaust their funds early in the semester, which forces them into 
+        financial difficulties and reduces their food options, leading to dependence on expensive and nutritionally poor external food alternatives.`,
+        images: ["../images/mealplan_mockup1.jpg", "../images/mealplan_mockup2.jpg"]
       },
       project2: {
         title: "Brand Identity System",
-        description: "A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.",
+        description: `A complete identity system for a conceptual beverage brand including packaging, web presence, and advertising.`,
         images: ["../images/project2_1.jpg", "../images/project2_2.jpg"]
       },
       project3: {
         title: "Editorial Layout Project",
-        description: "Magazine spread designs focusing on modern grid systems and expressive typography.",
+        description: `Magazine spread designs focusing on modern grid systems and expressive typography.`,
         images: ["../images/project3_1.jpg", "../images/project3_2.jpg", "../images/project3_3.jpg"]
       }
     };
